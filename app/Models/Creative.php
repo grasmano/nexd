@@ -37,7 +37,6 @@ class Creative extends Model
     }
 
     public static function updateCreative($data) {
-        print_r($data);
         Creative::where('id', '=', $data['id'])
             ->update(
                 [
@@ -49,17 +48,4 @@ class Creative extends Model
             );
         return 'Creative updated';
     }
-//
-//    public static function updateCampaign($data) {
-//        print_r($data);
-//        Campaign::where('id', $data['id'])
-//            ->update(
-//                [
-//                    'id' => $data['id'],
-//                    'title' => $data['title'],
-//                    'status' => $data['status'],
-//                    'start_date' => $data['start_date']
-//                ]
-//            );
-//    }
 }

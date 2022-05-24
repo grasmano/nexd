@@ -1,7 +1,5 @@
 .main-div {
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin: 50px;
 }
 
 .main-title {
@@ -9,11 +7,32 @@
 }
 
 th {
-    text-align: center;
+    border-bottom: solid 1px #cccccc;
+}
+td {
+    border-bottom: solid 1px #cccccc;
 }
 
 .creatives-block {
     width: 40%;
+}
+
+.select-input {
+    padding: 0.375rem 2.0rem 0.375rem 0.75rem;
+}
+
+.pr-table {
+
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #212529;
+     vertical-align: top;
+     border-color: #dee2e6;
+}
+
+.text-input {
+    padding: 0.28rem 0.75rem;
 }
 
 .add-button {
@@ -37,9 +56,6 @@ th {
     font-size: 14px;
     cursor: pointer;
 }
-.remove-button.hover {
-    background-color: #ff4a4c;
-}
 
 .save-button {
     background-color: blue;
@@ -53,6 +69,6 @@ th {
 }
 
 .filter-sort-buttons {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }

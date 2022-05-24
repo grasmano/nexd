@@ -15,11 +15,13 @@ class Campaign extends Model
         'start_date',
     ];
 
-    public function creatives() {
+    public function creatives()
+    {
         return $this->hasMany(Creative::class);
     }
 
-    public static function createCampaign($data) {
+    public static function createCampaign($data)
+    {
         $campaign = new Campaign ([
             'title' => $data['title'],
             'status' => $data['status'],
@@ -29,8 +31,8 @@ class Campaign extends Model
         return $campaign['id'];
     }
 
-    public static function updateCampaign($data) {
-        print_r($data);
+    public static function updateCampaign($data)
+    {
         Campaign::where('id', $data['id'])
             ->update(
                 [
@@ -42,7 +44,8 @@ class Campaign extends Model
             );
     }
 
-    public static function deleteCampaign($id) {
+    public static function deleteCampaign($id)
+    {
         Campaign::where('id', $id)->delete();
     }
 

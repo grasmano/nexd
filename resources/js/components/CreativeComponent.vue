@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <table  v-show="campaign.creatives.length > 0">
+    <div class="">
+        <table class="pr-table" v-show="campaign.creatives.length > 0">
             <thead>
             <tr>
                 <th>Title</th>
@@ -11,19 +11,18 @@
             <tbody>
             <tr v-for="(creative, k) in campaign.creatives" :key="creative.id">
                 <td>
-                    <input type="text" v-model="creative.title">
+                    <input class="text-input" type="text" v-model="creative.title">
                 </td>
                 <td>
-                    <select v-model="creative.status" @change="onCreativeStatusChange(campaign)">
-                        <!--<option :value="status" v-for="{key,value} in campaignStatuses">{{name}}</option>-->
-                        <option  :value="key" v-for="(value, key) in statuses">{{value}}</option>
+                    <select class="select-input" v-model="creative.status" @change="onCreativeStatusChange(campaign)">
+                        <option :value="key" v-for="(value, key) in statuses">{{value}}</option>
                     </select>
                 </td>
                 <td>
                     <div class="btn-group" role="group">
                         <button class="remove-button" @click="removeCreative(campaign, k )">Remove Creative</button>
                     </div>
-                </td>{{creative}}
+                </td>
             </tr>
             </tbody>
         </table>
@@ -33,9 +32,9 @@
 <script>
     export default {
         props: {
-          campaign: {
-              type: Object
-          }
+            campaign: {
+                type: Object
+            }
         },
         data() {
             return {
@@ -56,7 +55,7 @@
                 campaign.creatives.splice(k, 1);
             },
 
-            onCreativeStatusChange (campaign) {
+            onCreativeStatusChange(campaign) {
                 const statuses = [];
                 campaign.creatives.forEach((creative) => {
                     statuses.push(creative.status);
