@@ -16,5 +16,5 @@
 
 7. run "php artisan serve"
 
-8 open http://127.0.0.1:8000/ link in browser and (if need) run "php artisan key:generate"
+8. open http://127.0.0.1:8000/ link in browser and (if need) run "php artisan key:generate"
 
