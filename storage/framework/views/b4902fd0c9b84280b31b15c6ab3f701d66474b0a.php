@@ -12,10 +12,7 @@
         <div class="main-div">
             <h2 class="main-title">Nexd testwork developed by Oleg Grasman</h2>
             <campaign-component></campaign-component>
-            
-            
         </div>
-
     </div>
     <script src="<?php echo e(mix('js/app.js')); ?>" type="text/javascript"></script>
 </body>

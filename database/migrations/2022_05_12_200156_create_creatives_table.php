@@ -15,14 +15,11 @@ class CreateCreativesTable extends Migration
     {
         Schema::create('creatives', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('status');
-            $table->unsignedBigInteger('campaign_id');
-
-            $table->foreign('campaign_id')
-                ->references('id')
-                ->on('campaigns')
-                ->onUpdate('cascade');
+            $table->string('title')->nullable();
+            $table->integer('status')->nullable();
+            $table->bigInteger('campaign_id')->unsigned()->index()->nullable();
+            $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 

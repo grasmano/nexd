@@ -15,9 +15,10 @@ class CreateCampaignsTable extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('status');
+            $table->string('title')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamp('start_date')->useCurrent();
+            $table->timestamps();
         });
     }
 
